@@ -14,6 +14,7 @@ starlite = "*"
 sqlalchemy = "*"
 python-jose = "*"
 cryptography = "*"
+argon2-cffi = {version = "*", optional = true}
 
 [tool.poetry.group.dev.dependencies]
 pytest = "*"
@@ -24,6 +25,9 @@ aiosqlite = "^0.17.0"
 mkdocs-material = "^8.5.11"
 mkdocstrings = {extras = ["python"], version = "^0.19.1"}
 pytest-cov = "^4.0.0"
+
+[tool.poetry.extras]
+argon2 = ["argon2-cffi"]
 
 [build-system]
 requires = ["poetry-core"]
